@@ -1,8 +1,8 @@
 #!/bin/bash
 docker stop myner
 docker rm myner
-docker build -t trex:8.3-cuda9.2 .
-docker run -it \
+nvidia-docker build -t trex:8.3-cuda9.2 .
+nvidia-docker run -it \
     --restart always \
     --name myner \
     --runtime=nvidia \
