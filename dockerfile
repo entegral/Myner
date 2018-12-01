@@ -17,6 +17,6 @@ RUN apt-get install -y libcurl3
 
 # Download trex binary and extract
 RUN wget 'https://github.com/trexminer/T-Rex/releases/download/0.8.3/t-rex-0.8.3-linux-cuda9.1.tar.gz'
-RUN tar -xzvf t-rex-0.8.3-linux-cuda10.0.tar.gz
+RUN tar -xzvf t-rex-0.8.3-linux-cuda9.1.tar.gz
 
 CMD /home/user/t-rex -a $ALGO -i $INTENSITY -o $POOL_ADDRESS -u $WORKER_NAME -p $PASS
