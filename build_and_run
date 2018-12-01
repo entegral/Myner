@@ -1,7 +1,7 @@
 #!/bin/bash
 docker stop myner
 docker rm myner
-nvidia-docker build -t trex:8.3-cuda9.2 .
+nvidia-docker build -t trex:8.3-cuda9.1 .
 nvidia-docker run -it \
     --restart always \
     --name myner \
@@ -12,4 +12,4 @@ nvidia-docker run -it \
     -e WORKER_NAME='RUYJUbse5DJQQwNxRjC41vDgZX7UgSV3Tp.off' \
     -e PASS='x' \
     --mount source=mining,target=/home/user/scripts \
-    trex:8.3-cuda9.2
+    trex:8.3-cuda9.1

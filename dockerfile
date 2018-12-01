@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.2-runtime-ubuntu16.04
+FROM nvidia/cuda:9.1-runtime-ubuntu16.04
 
 # Setup Env
 RUN mkdir /home/user
@@ -16,7 +16,7 @@ RUN apt-get install -y libcurl3
 # RUN echo '#!/bin/bash' >> scripts/run.sh
 
 # Download trex binary and extract
-RUN wget 'https://github.com/trexminer/T-Rex/releases/download/0.8.3/t-rex-0.8.3-linux-cuda10.0.tar.gz'
+RUN wget 'https://github.com/trexminer/T-Rex/releases/download/0.8.3/t-rex-0.8.3-linux-cuda9.1.tar.gz'
 RUN tar -xzvf t-rex-0.8.3-linux-cuda10.0.tar.gz
 
 CMD /home/user/t-rex -a $ALGO -i $INTENSITY -o $POOL_ADDRESS -u $WORKER_NAME -p $PASS
