@@ -1,0 +1,15 @@
+#!/bin/bash
+docker stop myner
+docker rm myner
+docker build -t trex:current .
+docker run -it \
+    --restart always \
+    --name myner \
+    --runtime=nvidia \
+    -e ALGO='x16r' \
+    -e INTENSITY='21' \
+    -e POOL_ADDRESS='stratum+tcp://pool.minermore.com:4501' \
+    -e WORKER_NAME='RUYJUbse5DJQQwNxRjC41vDgZX7UgSV3Tp.off' \
+    -e PASS='x' \
+    --mount source=mining,target=/home/user/scripts \
+    trex:current
