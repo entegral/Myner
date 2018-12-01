@@ -1,4 +1,4 @@
-FROM nvidia/cuda
+FROM nvidia/cuda:9.2-runtime-ubuntu16.04
 
 # Setup Env
 RUN mkdir /home/user
@@ -7,8 +7,8 @@ WORKDIR /home/user
 # Update Image and install dependencies
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y wget
-RUN apt-get install -y libssl1.0.0
-RUN apt-get install -y libcurl3
+# RUN apt-get install -y libssl1.0.0
+# RUN apt-get install -y libcurl3
 
 # Setup mining script
 # RUN touch scripts/run.sh
