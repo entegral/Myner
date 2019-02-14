@@ -6,7 +6,7 @@
 
 _This application is a docker container that runs the T-Rex x16r mining algorithm. It does this through the use of nvidia's provided cuda-enabled docker container images. This permits rapid comparison of mining efficiency across various versions of cuda and T-rex versions. It is important to note that use of this(these) docker containers is reliant upon the selected cuda compatibility with the host's installed driver version._
 
-Also consider checking out a Rails server app that I've created as a convenient companion app to this project, [Myner Server](https://github.com/entegral/myner-server).
+Also consider checking out the Rails server app that I have created as a convenient companion app to this project, [Myner Server](https://github.com/entegral/myner-server).
 
 ## Setup/Installation Requirements
 
